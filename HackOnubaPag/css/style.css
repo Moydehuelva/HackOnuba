@@ -1,0 +1,908 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: left;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+/**textarea {
+  resize: vertical;
+}**/
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html {
+  box-sizing: border-box;
+
+}
+*,*::before,*::after {
+box-sizing: inherit;
+}
+body {
+background-color: #f2f2f2;
+}
+/** Generales **/
+.contenedor {
+  width: 98%;
+  margin: 0 auto;
+}
+@media only screen and (min-width:480px){
+  .contenedor {
+    width: 95%;
+}
+}
+@media only screen and (min-width:768px){
+  .contenedor {
+    width: 95%;
+}
+}
+@media only screen and (min-width:992px){
+  .contenedor {
+    width: 95%;
+}
+}
+.seccion{
+  padding: 30px;
+}
+.seccion p {
+  font-size: 1.3em;
+  text-align: center;
+
+}
+h2{
+  font-family: "Antic Didone", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+}
+h2::after{
+  content: '';
+  margin: 0 auto;
+  background-image: url(../img/separador.png);
+  height: 30px;
+  width: 100px;
+  display: block;
+}
+p{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+h3 {
+  font-size: 1.8em;
+  color: #0303a1;
+  font-family: "Antic Didone", serif;
+  margin: 0;
+}
+.button {
+  background-color: #0303a1;
+  padding: 10px 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.button:hover {
+  background-color: #0025f7;
+}
+.float-right {
+  float: right;
+}
+
+/*header*/
+div.hero {
+  background-image: url(../img/puentes\ odiel.jpg);
+  height: 50vh;
+  background-position: top center;
+  background-size: cover;
+}
+div.cont-header {
+  padding-top: 40px;
+}
+
+nav.redes {
+  text-align: center;
+}
+nav.redes  a {
+  color: #fff;
+  font-size: 2em;
+}
+div.description {
+  text-align: center;
+  color: #fff;
+}
+/*ajustamos el ancho para que la información se vea bien en el ancho de la pagina*/
+@media only screen and (min-width:768px){
+  div.description {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+div.description p {
+  margin: 0;
+  display: inline;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+p.fecha {
+  float: left;
+}
+p.ubicacion {
+  float: right;
+  text-align: right;
+}
+h1.nombre-evento {
+  font-family: "Antic Didone", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 5.9vw;
+}
+@media only screen and (min-width:768px) {
+  h1.nombre-evento {
+    font-family: "Antic Didone", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 11.5vw;
+    margin: 0;
+    line-height: 1;
+  }
+}
+/** barra **/
+div.barra {
+  background-color: #000033;
+  padding: 20PX 0;
+}
+div.logo {
+  width: 80%;
+
+
+}
+div.logo img{
+  width: 50%;
+}
+@media only screen and (min-width:768px) {
+  div.logo {
+    width: 100%;
+
+  }
+}
+
+/**menu navegacion**/
+nav.menu {
+  display: none;
+}
+nav.menu a{
+  font-family: "Open Sans", sans-serif;
+  color: #f1f1f1;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .5s ease;
+}
+nav.menu a:hover{
+  background-color: #0303a1;
+
+}
+nav.menu a:last-child{
+  border: 1px solid #0303a1;
+  color: #0303a1;
+}
+nav.menu a:last-child:hover{
+  color: #ffffff;
+
+}
+
+@media only screen and (min-width:768px) {
+  nav.menu {
+    width: 67%;
+    float: right;
+    text-align: right;
+    display: block;
+  }
+  nav.menu a{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 2px 20px;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+
+  }
+}
+/** Menu Movil**/
+div.menu-movil {
+  width: 60px;
+  display: block;
+  float: right;
+  text-align: right;
+  margin-top: 0;
+}
+div.menu-movil:hover{
+  cursor: pointer;
+}
+div.menu-movil span{
+  height: 8px;
+  margin-bottom: 6px;
+  background-color: #f1f1f1;
+  display: block;
+}
+@media only screen and (min-width:768px) {
+  div.menu-movil {
+    display: none;
+  }
+}
+/*Programa evento*/
+section.programacion {
+  position: relative;
+}
+div.contenedor-imagen {
+  background-image: url(../img/bg-planificacion.png);
+  height: 120vh;
+  background-position: top center;
+  background-size: cover;
+}
+div.contenido-programa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+}
+div.programa-conferencia {
+  background-color: rgba(255, 255, 255, .6);
+  padding: 20px;
+  margin-top: 50px;
+}
+@media only screen and (min-width:768px) {
+  div.programa-conferencia {
+    width: 70%;
+  }
+}
+@media only screen and (min-width:992px) {
+  div.programa-conferencia {
+    width: 50%;
+  }
+}
+nav.menu-programa {
+  width: 100%;
+  border-bottom: 1px solid #0303a1;
+  padding-bottom: 5px;
+}
+@media only screen and (min-width:768px) {
+  nav.menu-programa {
+    display: table;
+  }
+}
+nav.menu-programa a {
+  display: block;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  font-family: "Antic Didone", serif;
+  margin-top: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+nav.menu-programa a.activo {
+  background-color: #0025f7;
+  color: #f1f1f1;
+}
+div.ocultar {
+  display: none;
+}
+@media only screen and (min-width:768px) {
+  nav.menu-programa a {
+    display: table-cell;
+  }
+}
+/* detalle evento*/
+div.detalle-evento {
+
+  border-bottom: 1px solid #0303a1;
+  padding: 10px;
+}
+div.detalle-evento p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/*Lista de invitados*/
+ul.lista-conferenciantes li {
+  padding: 10px;
+  float: left;
+}
+@media only screen and (min-width:480px) {
+  ul.lista-conferenciantes li {
+    width: 50%;
+  }
+}
+@media only screen and (min-width:768px) {
+  ul.lista-conferenciantes li {
+    width: 33.3%;
+  }
+}
+div.invitado {
+  position: relative;
+  bottom: 100%;
+  overflow: hidden;
+}
+div.invitado img {
+  max-width: 100%;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .6s ease-in-out;
+}
+div.invitado:hover img {
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+}
+div.invitado p {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, .5);
+  width: 100%;
+  text-align: left;
+  font-family: "Antic Didone", serif;
+  color: #0303a1;
+  font-weight: bold;
+  -webkit-transition: all .6s ease-in-out;
+
+}
+div.invitado:hover p {
+  bottom: -80px;
+  opacity: 0;
+}
+/*contador resumen*/
+.parallax::before{
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+p.numero {
+  color: #0025f7;
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
+}
+/*Lista de Precios*/
+ul.lista-precios > li {
+  padding: 10px;
+}
+@media only screen and (min-width:768px) {
+  ul.lista-precios > li {
+    float: left;
+    width: 50%;
+  }
+}
+div.tabla-precios {
+  border: 1px solid #707078;
+  background-color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  transition: all .4s ease;
+}
+div.tabla-precios:hover{
+  transform: scale(1.2);
+  border: 1px solid #0303a1;
+  box-shadow: 0px 0px 50px #707078;
+}
+div.tabla-precios ul li {
+  font-family: "Antic Didone", serif;
+  font-size: 14px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 26px;
+  font-weight: bold;
+}
+div.tabla-precios ul li img {
+  width: 3%;
+}
+div.tabla-precios h3 {
+  font-size: "Antic Didone", serif;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+div.tabla-precios p.numero {
+  color: #000;
+  margin-top: 20px 0;
+  font-weight: bold;
+}
+/*mapa*/
+div.mapa {
+  height: 480px;
+  background-color: #0025f7;
+}
+/* opiniones*/
+div.opiniones {
+  padding-bottom: 20px;
+}
+div.opinion {
+  padding: 5px 5px 5px 5px;
+}
+@media only screen and (min-width:768px) {
+  div.opinion {
+    float: left;
+    width: 50%;
+  }
+}
+blockquote{
+  background-color: #ffffff;
+  border: 2px solid #000033;
+  position: relative;
+  margin: 60px 0 50px 20px;
+  padding-bottom: 60px;
+}
+blockquote p {
+  text-align: left!important;
+  font-size: 1.5em!important;
+  font-family: "Antic Didone", serif;
+  padding: 0 20px 0px 65px;
+
+}
+blockquote p::before {
+  content: '\201c';
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #0303a1;
+}
+footer.info-opinion {
+  padding: 0;
+}
+footer.info-opinion img {
+  float: left;
+  width: 10%;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+footer.info-opinion cite {
+  text-align: left;
+  color: #0303a1;
+  font-size: 20px;
+  padding-top: 20px;
+}
+/* cuenta atras*/
+div.cuenta-atras ul li {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+@media only screen and (min-width:768px) {
+  div.cuenta-atras ul li {
+    width: 25%;
+    float: left;
+  }
+}
+/*footer*/
+
+footer.pie-pagina {
+  background-color: #000033;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+footer.pie-pagina p {
+  color: #ffffff;
+  padding: 0px 20px;
+  font-size: l2px;
+  text-align: justify;
+}
+@media only screen and (min-width:768px) {
+  footer .contenedor > div {
+    width: 50%;
+    float: left;
+  }
+}
+/** INTERNAS **/
+/*Registro*/
+form.registro h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+}
+form.registro label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #0303a1;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+div.caja {
+  background-color: #ffffff;
+  border: 1px solid #707078;
+  padding: 10px;
+  margin: 10px;
+}
+div.campo {
+  padding: 20px;
+}
+@media only screen and (min-width:768px) {
+  div.campo {
+    float: left;
+    width: 33.3%;
+  }
+}
+div.paquetes .tabla-precios:hover{
+  transform: none;
+  box-shadow: none;
+}
+div.paquetyes .tabla-precios input {
+  clear: both;
+  width: 100px;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+.contenido-dia {
+  padding: 20px;
+  display: none;
+}
+@media only screen and (min-width:768px) {
+  .contenido-dia > div {
+    float: left;
+    width: 50%;
+  }
+}
+.contenido-dia > div p {
+  text-align: left;
+}
+.contenido-dia > div label {
+  display: block;
+  margin-bottom: 10px;
+}
+.contenido-dia > div label time {
+  color: #0303a1;
+  font-weight: bold;
+}
+/*resumnen*/
+
+  .resumen p {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+@media only screen and (min-width:768px) {
+
+div.resumen div.extras {
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+}
+div.extras div.orden {
+  text-align: left;
+  margin-bottom: 10px;
+}
+div.extras div.orden input {
+  margin: 30px 0 25px 0;
+}
+div.resume div.total {
+  float: right;
+  width: 50%;
+  padding: 30px;
+}
+div.resumen input {
+  display: block;
+  margin: 10px auto;
+}
+
+div.extras div.orden select {
+  margin: 10px 0 0 0;
+  display: block;
+}
+
+#lista-productos {
+  text-align: center;
+  padding: 20PX;
+  display: none;
+}
+#suma-total {
+  text-align: center;
+  font-size: 2em;
+  color: #0303a1;
+  padding: 20px;
+}
+#error {
+  clear: both;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+/*galeria*/
+ul.lista-galeria li img {
+    width: 100%;
+    align-self: auto;
+    padding: auto;
+}
+
+/**AGENDA**/
+div.calendario::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+div.dia {
+  width: 50% ;
+  float: left;
+  border: 2px solid #707078;
+  min-height: 220px;
+  padding-top: 20px;
+}
+
+@media only screen and (min-width:768px) {
+
+  div.dia {
+    width: 25%;
+  }
+  
+}
+div.dia:hover {
+  background-color: #ccc;
+}
+div.dia p {
+  font-size: 1em;
+}
+div.dia p.titulo {
+  color: #0025f7;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
